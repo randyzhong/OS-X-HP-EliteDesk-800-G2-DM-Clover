@@ -74,7 +74,25 @@ Press **F10** to save changes.
 - AppleALC (1.4.8)
 - WhateverGreen.kext (1.3.8)
 
+### USB 3.0 Ports
+**USB 2.0 Device**
+- HS01
+- HS02
+- HS03
+- HS04
+- HS05
+- HS13
+
+**USB 3.0 Device**
+- SS01
+- SS02
+- SS03
+- SS04
+- SS05
+- SS08
+
+**Type-C not tested**
 
 ## Known Issues:
-- Thunderbolt is not tested
+- Type-C port is not tested
 - Sleep is not working (Reboot or blackscreen when trying to wake it)
