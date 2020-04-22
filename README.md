@@ -12,7 +12,7 @@ Here is my EliteDesk 800 G2 DM specs:
 
 ### Specs:
 - CPU: Intel® Core i7-6700 @ 3.40 GHz processor (65 W model only)
-- GPU: Integrated Intel® HD Graphics 530 (3 DisplayPorts)
+- GPU: Integrated Intel® HD Graphics 530 (2 DisplayPorts + 1 VGA Port)
 - Memory: 1 x 8GB Micron DDR4-2400
 - Storage: SAMSUNG MZ7LN256HMJP-000H1 
 - LAN: Intel® I219M Gigabit Network Connection LOM
@@ -95,4 +95,5 @@ Press **F10** to save changes.
 
 ## Known Issues:
 - Type-C port is not tested
+- VGA port is not tested
 - Sleep is not working (Reboot or blackscreen when trying to wake it)
