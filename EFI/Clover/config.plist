@@ -152,7 +152,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>lilucpu=8</string>
+		<string>lilucpu=8 dart=0 nv_disable=1 gfxrst=1 agdpmod=vit9696 -igfxnohdmi -igfxdump -igfxfbdump</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverDoRecovery</key>
@@ -175,6 +175,50 @@
 		</dict>
 		<key>LANInjection</key>
 		<false/>
+		<key>Properties</key>
+		<dict>
+			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,31,3</string>
+				<key>device_type</key>
+				<string>Audio device</string>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
+				<key>layout-id</key>
+				<data>CwAAAA==</data>
+				<key>model</key>
+				<string>100 Series/C230 Series Chipset Family HD Audio Controller</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1f,0x6)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal</string>
+				<key>device_type</key>
+				<string>Ethernet controller</string>
+				<key>model</key>
+				<string>Ethernet Connection (2) I219-LM</string>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
+			<dict>
+				<key>AAPL,ig-platform-id</key>
+				<data>AAAbGQ==</data>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,2,0</string>
+				<key>device-id</key>
+				<data>EhkAAA==</data>
+				<key>device_type</key>
+				<string>VGA compatible controller</string>
+				<key>framebuffer-flags</key>
+				<data>DxMAAA==</data>
+				<key>framebuffer-patch-enable</key>
+				<data>AQAAAA==</data>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
+				<key>model</key>
+				<string>Intel HD Graphics 530</string>
+			</dict>
+		</dict>
 		<key>USB</key>
 		<dict>
 			<key>FixOwnership</key>
@@ -206,7 +250,7 @@
 		<key>EDID</key>
 		<dict>
 			<key>Inject</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>Inject</key>
 		<dict>
@@ -230,7 +274,7 @@
 				<key>Comment</key>
 				<string>USB port limit patch #1 10.15 (Credits PMheart and daliansky)</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>g/sPDw==</data>
 				<key>InfoPlistPatch</key>
@@ -246,7 +290,7 @@
 				<key>Comment</key>
 				<string>USB Port limit patch #1/2 10.15.x (credit DalianSky)</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>g/sPDw==</data>
 				<key>InfoPlistPatch</key>

@@ -56,23 +56,24 @@ Press **F10** to save changes.
 - To be updated
 
 ### Tested OS
-- macOS Catalina 10.15.4
+- macOS Catalina 10.15.7
 
 ### Clover
-- Clover r5108
+- Clover r5122
 
 ### Kexts
 - FakePCIID_XHCIMux.kext (1.3.15) 
-- VirtualSMC.kext (1.1.2)
-  - SMCProcessor.kext (1.1.2)
-  - SMCSuperIO.kext (1.1.2)
-- IntelMausi.kext (1.0.2)
+- VirtualSMC.kext (1.1.8)
+  - SMCProcessor.kext (1.1.8)
+  - SMCSuperIO.kext (1.1.8)
+- CPUFriend.kext (1.2.2)
+- IntelMausi.kext (1.0.4)
 - USBPorts.kext (1.0)
 - SATA-unsupported (0.9.2)
 - XHCI-unsupported.kext (0.9.2)
-- Lilu.kext (1.4.3)
-- AppleALC (1.4.8)
-- WhateverGreen.kext (1.3.8)
+- Lilu.kext (1.4.9)
+- AppleALC (1.5.4)
+- WhateverGreen.kext (1.4.4)
 
 ### USB 3.0 Ports
 **USB 2.0 Device**
@@ -91,9 +92,10 @@ Press **F10** to save changes.
 - SS05
 - SS08
 
-**Type-C not tested**
+**Type-C**
+- HS09
 
 ## Known Issues:
-- Type-C port is not tested
 - VGA port is not tested
 - Sleep is not working (Reboot or blackscreen when trying to wake it)
+- Upgrade to macOS Big Sur 11.0.x is not supported (Will upadte soon)
