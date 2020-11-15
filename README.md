@@ -97,5 +97,6 @@ Press **F10** to save changes.
 
 ## Known Issues:
 - VGA port is not tested
+- Front Headphone/Mic combo jack is not working
 - Sleep is not working (Reboot or blackscreen when trying to wake it)
 - Upgrade to macOS Big Sur 11.0.x is not supported (Will upadte soon)
