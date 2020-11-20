@@ -1,3 +1,6 @@
+# macOS Big Sur Support
+Go to [OpenCore version](https://github.com/randyzhong/HP-EliteDesk-800-G2-DM-Hackintosh) to get Big Sur support!
+
 # OS-X-HP-EliteDesk-800-G2-DM-Clover
 This repository contains the files and scripts to install macOS on the HP EliteDesk 800 G2 Desktop Mini Business PC (35 W/65 W).
 
