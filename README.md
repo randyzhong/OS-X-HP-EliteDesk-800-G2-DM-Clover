@@ -1,5 +1,7 @@
 # macOS Big Sur Support
-Go to [OpenCore version](https://github.com/randyzhong/HP-EliteDesk-800-G2-DM-Hackintosh) to get Big Sur support!
+This new release support Big Sur (May 16, 2021) now!
+Or you can go to [OpenCore version](https://github.com/randyzhong/HP-EliteDesk-800-G2-DM-Hackintosh) for the OpenCore version
+
 
 # OS-X-HP-EliteDesk-800-G2-DM-Clover
 This repository contains the files and scripts to install macOS on the HP EliteDesk 800 G2 Desktop Mini Business PC (35 W/65 W).
@@ -19,7 +21,7 @@ Here is my EliteDesk 800 G2 DM specs:
 - Memory: 1 x 8GB Micron DDR4-2400
 - Storage: SAMSUNG MZ7LN256HMJP-000H1 
 - LAN: Intel® I219M Gigabit Network Connection LOM
-- WLAN: Intel® 8260 802.11ac 2x2 Wi-Fi with Bluetooth M.2 Combo Card Vpro (802.11ac Wave 2 supported)
+- WLAN: BCM943224PCIEBT2 300Mbps 2.4&5G WiFi bluetooth 4.0 Mini PCIe
 - Audio: Realtec ALC221 Audio Codec (all ports are stereo, 1 internal speaker, 1 front headphone, 1 front CITA port)
 
 ## Configure BIOS Settings
@@ -53,6 +55,10 @@ Then insure:
 #### Advanced -> Power Management Options
 - Disable **Extended Idle Power States**
 
+#### Advanced > Option ROM Launch Policy (Dual displays support)
+- Configure Option ROM Launch Policy to **All UEI**
+
+
 Press **F10** to save changes.
 
 ## Installation
@@ -60,46 +66,50 @@ Press **F10** to save changes.
 
 ### Tested OS
 - macOS Catalina 10.15.7
+- macOS Big Sur 11.3.1
 
 ### Clover
-- Clover r5122
+- Clover r5135
 
 ### Kexts
-- FakePCIID_XHCIMux.kext (1.3.15) 
-- VirtualSMC.kext (1.1.8)
-  - SMCProcessor.kext (1.1.8)
-  - SMCSuperIO.kext (1.1.8)
-- CPUFriend.kext (1.2.2)
-- IntelMausi.kext (1.0.4)
+- VirtualSMC.kext (1.2.3)
+- SMCProcessor.kext (1.2.3)
+- SMCSuperIO.kext (1.2.3)
+- CPUFriend.kext (1.2.3)
+- IntelMausi.kext (1.0.6)
 - USBPorts.kext (1.0)
-- SATA-unsupported (0.9.2)
-- XHCI-unsupported.kext (0.9.2)
-- Lilu.kext (1.4.9)
-- AppleALC (1.5.4)
-- WhateverGreen.kext (1.4.4)
+- Lilu.kext (1.5.3)
+- AppleALC (1.5.8)
+- WhateverGreen.kext (1.4.9)
+- RTCMemoryFixup.kext (1.0.7)
+- AirportBrcmFixup.kext (2.1.2)
+- BrcmBluetoothInjector.kext (2.5.8)
 
 ### USB 3.0 Ports
 **USB 2.0 Device**
-- HS01
-- HS02
-- HS03
-- HS04
-- HS05
-- HS13
+- HS01: Back left up USB2
+- HS02: Back left down USB2
+- HS03: Front Left USB2
+- HS04: Back right down USB2
+- HS05: Back right up USB2
+- HS13: Front right USB2
 
 **USB 3.0 Device**
-- SS01
-- SS02
-- SS03
-- SS04
-- SS05
-- SS08
+- SS01: Back left up USB3
+- SS02: Back left down USB3
+- SS03: Front left USB3
+- SS04: Back right down USB3
+- SS05: Back right up USB3
+- SS08: Front right USB3
 
 **Type-C**
-- HS09
+- HS09: Front Type-C
+
+**Bluetooth**
+- HS07: Internal Bluetooth (Thanks to [git-ken-hub](https://github.com/git-ken-hub) and [anthonyuk](https://github.com/anthonyuk))
 
 ## Known Issues:
-- VGA port is not tested
+- VGA port is not supported
 - Front Headphone/Mic combo jack is not working
 - Sleep is not working (Reboot or blackscreen when trying to wake it)
-- Upgrade to macOS Big Sur 11.0.x is not supported (Will upadte soon)
+- Upgrade to macOS Big Sur 11.0.x from Catalina faces one time **Real-Time Clock (RTC) Power loss (005)** error, safely ignore it. When upgrade is finished, no RTC erros on normal reboot
